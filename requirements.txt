@@ -1,7 +1,5 @@
-approval_app/
-│
-├─ app.py               # Your Flask app
-├─ approval_model.pkl   # Your trained ML model
-├─ label_map.pkl        # Your label map
-├─ requirements.txt     # Python dependencies
-└─ runtime.txt          # Python version (optional)
+flask
+pandas
+scikit-learn
+joblib
+gunicorn
