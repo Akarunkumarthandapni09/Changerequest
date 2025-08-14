@@ -2,7 +2,7 @@
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
-
+import os
 app = Flask(__name__)
 
 # Load trained model and label map
@@ -25,4 +25,5 @@ def predict():
     return jsonify({"approval_flow": pred_flow})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))  # default 5000 for local
+    app.run(host="0.0.0.0", port=port)
